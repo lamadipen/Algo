@@ -1,4 +1,4 @@
-package mum.algo;
+package hrank.algo;
 
 public class Main {
 

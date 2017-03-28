@@ -1,4 +1,4 @@
-package mum.algo;
+package hrank.algo;
 
 /**
  * Created by dipen on 2/19/2017.
