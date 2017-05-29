@@ -10,8 +10,8 @@ import java.util.Scanner;
  */
 public class FibonacciModified2 {
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+   /* public static void main(String[] args) {
+        *//* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. *//*
         Scanner sc = new Scanner(System.in);
         int t1 = sc.nextInt();
         int t2 = sc.nextInt();
@@ -30,5 +30,5 @@ public class FibonacciModified2 {
         //System.out.println(formatter.format(fib[n-1]));
         System.out.println(fib[n-1]);
         String.format("$%,.20f", fib[n-1]);
-    }
+    }*/
 }
