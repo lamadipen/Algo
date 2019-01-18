@@ -16,37 +16,42 @@ public class MergeTwoArray {
        returnArray(thisWeek, lastWeek);
     }
 
-    /*public static String[] returnArray(String [] thisWeek, String [] lastWeek){
+    public static String[] returnArray(String [] thisWeek, String [] lastWeek){
         List<String> aList = Arrays.asList(thisWeek);
         List<String> bList = Arrays.asList(lastWeek);
         List<String> latest = new ArrayList<>();
+
         aList.stream().forEach((item)-> {
             if(!bList.contains(item)){
-                latest.add(item+"-new!" );
+                latest.add(item+" -new!" );
+            }else {
+                latest.add(item);
             }
         });
 
         bList.stream().forEach((item)->{
-            latest.add(item);
+            if(!aList.contains(item)){
+                latest.add(item);
+            }
         });
         Collections.sort(latest);
         System.out.println(Arrays.toString(latest.toArray()));
-        return null;
-    }*/
+        return latest.stream().toArray(String[]::new);
+    }
 
+    /*
     public static String[] returnArray(String [] thisWeek, String [] lastWeek){
         List<String> thisWeekLst = Arrays.asList(thisWeek);
         List<String> lastWeekLst = Arrays.asList(lastWeek);
 
-    /*    List<String> latest = lastWeekLst.stream()
+        List<String> latest = lastWeekLst.stream()
                 .flatMap((lastWeekitem)-> {
                     return thisWeekLst.stream()
                             .filter((thisWeekItem)-> !lastWeekLst.contains(thisWeekItem))
                             .map((thisWeekItem)->thisWeekItem+"-new!");
                 }).collect(toList());
         System.out.println(Arrays.toString(latest.toArray()));
-     */
-        return null;
-    }
 
+        return null;
+    }*/
 }
