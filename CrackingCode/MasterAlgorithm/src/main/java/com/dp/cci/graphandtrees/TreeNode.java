@@ -1,8 +1,11 @@
 package com.dp.cci.graphandtrees;
 
+import lombok.Getter;
+
 /**
  * Created by dipen on 1/21/2019.
  */
+@Getter
 public class TreeNode {
 
     public TreeNode leftNode;
