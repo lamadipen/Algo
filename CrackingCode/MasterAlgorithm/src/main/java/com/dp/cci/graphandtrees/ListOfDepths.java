@@ -25,4 +25,28 @@ public class ListOfDepths {
         createLevelLinkedList_DFS(root.leftNode, lists, level + 1);
         createLevelLinkedList_DFS(root.rightNode, lists, level + 1);
     }
+
+    public ArrayList<LinkedList<TreeNode>> createLevelLinkedList_BFS(TreeNode root) {
+        ArrayList<LinkedList<TreeNode>> result = new ArrayList<>();
+        LinkedList<TreeNode> current = new LinkedList<>();
+
+        if (root != null) {
+            current.add(root);
+        }
+
+        while (current.size() > 0) {
+            result.add(current);
+            LinkedList<TreeNode> parents = current;
+            current = new LinkedList<TreeNode>();
+            for (TreeNode parent : parents) {
+                if (parent.leftNode != null) {
+                    current.add(parent.leftNode);
+                }
+                if (parent.rightNode != null) {
+                    current.add(parent.rightNode);
+                }
+            }
+        }
+        return result;
+    }
 }

@@ -10,9 +10,10 @@ import java.util.List;
  * Created by dipen on 1/19/2019.
  */
 @Builder
-@Getter
 public class Node {
+    @Getter
     private int data;
     @Setter
+    @Getter
     private List<Node> adjacent;
 }
