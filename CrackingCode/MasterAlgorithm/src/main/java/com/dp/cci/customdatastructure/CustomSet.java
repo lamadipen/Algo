@@ -1,54 +1,58 @@
 package com.dp.cci.customdatastructure;
 
 public class CustomSet {
+    private int size = 0;
+    private Object[] array;
 
-
-    private int size =0;
-    private int[] arr = new int[2];
+    public CustomSet() {
+        array = new Object[2];
+    }
 
     public boolean isEmpty() {
-        return  size > 0 ? false:true ;
+        return size == 0;
+    }
+
+    public void add(Object item) {
+        if (contains(item)) {
+            return;
+        }
+        if (size == array.length) {
+            resize();
+        }
+        array[size] = item;
+        size++;
+    }
+
+    private void resize() {
+        Object[] temp = new Object[size * 2];
+        System.arraycopy(array, 0, temp, 0, size);
+        array = temp;
     }
 
     public int getSize() {
         return size;
     }
 
-    public void add(int i) {
-        if(size >= arr.length){
-            resize();
-        }
-        if (contains(i)) {
-            return;
-        }
-        arr[size] = i;
-        size++;
+    public boolean contains(Object item) {
+        return getIndex(item) != -1;
     }
 
-    private void resize() {
-        int[] tempArr = new int[size*2];
-        System.arraycopy(arr,0,tempArr,0,size);
-        arr = tempArr;
-    }
-
-    public void remove(int i) {
-        int index = getIndexOf(i);
-        if(index > -1){
-            arr[index] = arr[size];
-            size--;
-        }
-    }
-
-    public boolean contains(int i) {
-        return getIndexOf(i) > -1 ? true : false;
-    }
-
-    private int getIndexOf(int i) {
-        for(int j=0; j < size; j++){
-            if(arr[j] == i){
-                return j;
+    private int getIndex(Object item) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].equals(item)) {
+                return i;
             }
         }
         return -1;
+    }
+
+    public void remove(String item) {
+        int index = getIndex(item);
+        if (array[index].equals(item)) {
+            array[index] = array[size - 1];
+            array[size - 1] = null;
+            size--;
+        }
+
     }
 }

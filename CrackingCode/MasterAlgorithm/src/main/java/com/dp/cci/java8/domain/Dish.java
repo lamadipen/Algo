@@ -1,4 +1,4 @@
-package com.dp.cci.java8;
+package com.dp.cci.java8.domain;
 
 import java.util.Arrays;
 import java.util.List;

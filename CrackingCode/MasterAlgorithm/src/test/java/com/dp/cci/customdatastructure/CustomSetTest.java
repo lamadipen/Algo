@@ -6,56 +6,68 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CustomSetTest {
-    CustomSet csEmpty;
-    CustomSet csOne;
-    CustomSet csMany;
+
+    CustomSet empty;
+    CustomSet one;
+    CustomSet many;
+
 
     @Before
     public void setUp() {
-        csEmpty = new CustomSet();
-        csOne = new CustomSet();
-        csMany = new CustomSet();
+        empty = new CustomSet();
+        one = new CustomSet();
+        many = new CustomSet();
+
+        one.add("one");
     }
+
     @Test
     public void isEmptyTest() {
-        assertTrue(csEmpty.isEmpty());
+
+        assertTrue(empty.isEmpty());
+        assertFalse(one.isEmpty());
     }
 
     @Test
-    public void getSizeTest(){
-        assertEquals(0,csEmpty.getSize());
+    public void sizeTest() {
+        assertEquals(0, empty.getSize());
+        assertEquals(1, one.getSize());
     }
 
     @Test
-    public void addTest() {
-        csMany.add(1);
-        csMany.add(2);
-        csMany.add(3);
-        csMany.add(4);
+    public void addContainsTest() {
+        many.add("one");
+        many.add("two");
+        many.add("three");
+        many.add("four");
 
-        csOne.add(1);
-        assertTrue(csEmpty.isEmpty());
-        assertEquals(0, csEmpty.getSize());
-        assertEquals(4, csMany.getSize());
+        assertTrue(one.contains("one"));
+        assertFalse(one.contains("two"));
+        assertTrue(many.contains("four"));
     }
 
     @Test
     public void removeTest() {
-        CustomSet cs = new CustomSet();
-        cs.add(1);
-        cs.remove(1);
+        one.remove("one");
+        many.add("one");
+        many.add("two");
 
-        assertEquals(0,cs.getSize());
-        assertFalse(cs.contains(1));
+        many.remove("one");
+
+        assertTrue(one.isEmpty());
+        assertFalse(one.contains("one"));
+        assertFalse(many.contains("one"));
     }
 
     @Test
-    public void uniqueTest() {
-        CustomSet cs = new CustomSet();
-        cs.add(1);
-        cs.add(1);
+    public void isUnique() {
+        many.add("one");
+        many.add("one");
+        many.add("two");
+        many.add("two");
 
-        assertEquals(1,cs.getSize());
+        assertEquals(2,many.getSize());
+
     }
 
 

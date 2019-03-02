@@ -1,6 +1,6 @@
 package com.dp.cci.java8.stream.ch4;
 
-import com.dp.cci.java8.Dish;
+import com.dp.cci.java8.domain.Dish;
 
 import java.util.Arrays;
 import java.util.Comparator;
