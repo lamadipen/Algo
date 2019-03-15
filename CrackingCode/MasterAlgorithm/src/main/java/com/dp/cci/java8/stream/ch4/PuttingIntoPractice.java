@@ -82,6 +82,8 @@ public class PuttingIntoPractice {
 
         // Query 7: What's the highest value in all the transactions?
         Optional<Transaction> max = transactions.stream().max(Comparator.comparing(Transaction::getValue));
+        Optional<Transaction> max1 = transactions.stream().max(Comparator.comparing(Transaction::getValue));
+
     }
 
 
