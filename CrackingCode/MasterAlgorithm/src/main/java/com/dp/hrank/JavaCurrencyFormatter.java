@@ -21,6 +21,7 @@ public class JavaCurrencyFormatter {
         System.out.println("India: " + india.format(payment));
         System.out.println("China: " + china.format(payment));
         System.out.println("France: " + france.format(payment));
+        
     }
 
 }
