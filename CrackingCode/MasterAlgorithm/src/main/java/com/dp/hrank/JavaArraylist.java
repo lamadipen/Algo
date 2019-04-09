@@ -33,6 +33,7 @@ public class JavaArraylist {
                 System.out.println("ERROR!");
             }
             queryNumber--;
+
         }
 
 
