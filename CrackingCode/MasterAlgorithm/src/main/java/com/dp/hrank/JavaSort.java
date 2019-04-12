@@ -34,10 +34,11 @@ public class JavaSort {
 
             }else
             {
-                return (int) (o2.getCgpa() * 100 - o1.getCgpa() * 100);
+                return (int) (o2.getCgpa() * 1000 - o1.getCgpa() * 1000);
             }
 
         };
+
         //Using Comparator java 7 way
         studentList.sort(comparator);
         
