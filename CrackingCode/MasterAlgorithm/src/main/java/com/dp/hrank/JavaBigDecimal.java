@@ -24,13 +24,16 @@ public class JavaBigDecimal {
         Arrays.sort(s, reverseOrder(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
+                if(o1 == null || o2 == null){
+                    return -1;
+                }
                 BigDecimal a = new BigDecimal(o1);
                 BigDecimal b = new BigDecimal(o2);
 
                 return a.compareTo(b);
             }
         }));
-
+// Solution that passed in the hacker rank
 //        Comparator<String> tComparator = (o1, o2) -> {
 //            BigDecimal a = new BigDecimal(o1);
 //            BigDecimal b = new BigDecimal(o2);
@@ -40,6 +43,20 @@ public class JavaBigDecimal {
 //        List<String> collect = Arrays.stream(s)
 //                .sorted(tComparator)
 //                .collect(Collectors.toList());
+
+
+//        Comparator<String> comparator = new Comparator<String>(){
+//            public int compare(String s1, String s2){
+//                if( s1 == null || s2 == null)return 0;
+//
+//                BigDecimal d1 = new BigDecimal(s1);
+//                BigDecimal d2 = new BigDecimal(s2);
+//                return d2.compareTo(d1);
+//            }
+//
+//        };
+//
+//        Arrays.sort(s, comparator);
 
 
         //Output
