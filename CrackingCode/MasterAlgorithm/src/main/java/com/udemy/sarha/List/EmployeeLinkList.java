@@ -1,71 +1,13 @@
-package com.udemy.List;
+package com.udemy.sarha.List;
+
+import com.udemy.sarha.Employee;
 
 import java.util.*;
 
 /**
  *
  */
-public class Employee {
-    private int id;
-    private String firstName;
-    private String lastName;
-
-
-
-    public Employee(int id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return id == employee.id &&
-                Objects.equals(firstName, employee.firstName) &&
-                Objects.equals(lastName, employee.lastName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstName, lastName);
-    }
-
+public class EmployeeLinkList {
 
     public static void main(String... args) {
 //        arrayListDemo();
@@ -77,6 +19,19 @@ public class Employee {
 
 //        myDoublyLinkedList();
 
+//        javaLinkList();
+
+        EmployeeDoublyLinkedList dl = new EmployeeDoublyLinkedList();
+        dl.addToFront(new Employee(11, "Hari", "thapa"));
+        dl.addToFront(new Employee(10,"Dipen","lama"));
+        dl.addToFront(new Employee(12,"Sunny","lama"));
+        dl.addBefore(new Employee(11, "Hari", "thapa"),new Employee(12, "Shyam", "thapa"));
+        dl.printList();
+
+
+    }
+
+    private static void javaLinkList() {
         LinkedList<Employee> linkedList = new LinkedList<>();
 
         linkedList.addFirst(new Employee(10,"Dipen","Lama"));
@@ -89,8 +44,6 @@ public class Employee {
             System.out.print("<>");
         }
         System.out.print("null");
-
-
     }
 
     private static void myDoublyLinkedList() {
@@ -276,6 +229,31 @@ class EmployeeDoublyLinkedList{
         size--;
     }
 
+    public boolean addBefore(Employee e1, Employee e2) {
+        if(head == null){
+            return false;
+        }
+        EmployeeNodeDoubly current = head;
+        while (head != null && current.getEmployee().equals(e1)){
+            current = current.getNext();
+        }
+        if(current == null ){
+            return false;
+        }
+        EmployeeNodeDoubly newNode = new EmployeeNodeDoubly(e2);
+        newNode.setPrevious(current.getPrevious());
+        newNode.setNext(current);
+        current.setPrevious(newNode);
+        if(head.equals(current)){
+           // head = newNode;
+        }else{
+
+            current.getPrevious().setNext(newNode);
+        }
+        size++;
+        return true;
+    }
+
     public EmployeeNodeDoubly getHead() {
         return head;
     }
@@ -305,6 +283,14 @@ class EmployeeDoublyLinkedList{
 }
 
 class EmployeeNodeDoubly{
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
     private Employee employee;
     private EmployeeNodeDoubly next;
     private EmployeeNodeDoubly previous;
