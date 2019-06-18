@@ -17,4 +17,16 @@ public class MyObject {
         }
 
     }
+
+    //static method are synchronized on the class lock
+    //Two thread even with different object cannot access synchronized method at same time
+    public static synchronized void foo() {
+
+    }
+
+    public void bar() {
+        synchronized(this){
+            System.out.println("Hello");
+        }
+    }
 }
