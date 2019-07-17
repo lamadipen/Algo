@@ -1,4 +1,4 @@
-package com.udemy.sarha.hashtable;
+package com.udemy.sarha.hashtable.customhashtable;
 
 import com.udemy.sarha.Employee;
 
