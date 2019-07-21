@@ -7,33 +7,20 @@ public class NewYearChaos {
     static void minimumBribesMySolution(int[] q) {
         int bribeCount = 0;
         boolean isChaotic = false;
-        for(int i =0; i < q.length; i++){
-            if(q[i] == i +1)continue;
-            if(q[i] > i+3){
+
+        for(int i = 0 ; i < q.length; i++){
+            int queueIndex = i+1;
+            if(q[i] - queueIndex > 2 ){
                 isChaotic = true;
                 break;
-            }else{
-
-                if(q[i] == i+2){
-                    bribeCount++;
-                    //System.out.println("Queue number" + q[i]);
-                }
-                if(q[i] -1 == i+2){
+            }
+            for(int j=Math.max(0, q[i] -2); j < i;j++){
+                if(q[i] < q[j]){
                     bribeCount++;
                 }
-                if(q[i] == i+3){
-                    bribeCount++;
-                    //System.out.println("Queue number" + q[i]);
-                }else{
-                    if((i < q.length -1) && q[i] > q[i+1] ){
-                        //System.out.println("This is here "+  (q[i] - q[i+1]));
-                        //System.out.println(bribeCount);
-                        //bribeCount = (q[i] - q[i+1]) - 1 + bribeCount;
-                    }
-                }
-
             }
         }
+
         if(isChaotic){
             System.out.println("Too chaotic");
         }else{
