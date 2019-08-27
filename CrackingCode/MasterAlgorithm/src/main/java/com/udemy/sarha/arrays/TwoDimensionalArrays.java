@@ -2,6 +2,7 @@ package com.udemy.sarha.arrays;
 
 import java.util.Arrays;
 
+//http://math.hws.edu/javanotes/c7/s5.html
 public class TwoDimensionalArrays {
     //Two Dimension Array
     public static void twoDimensionalArrayBasic() {
@@ -29,6 +30,17 @@ public class TwoDimensionalArrays {
         System.out.println("");
         System.out.println("B[0] row:: " + Arrays.toString(B[0]));
     }
+
+
+    public static void matrix(){
+        int[][] matrix = new int[7][];// rows has not been yet created
+
+        for(int i=0; i < matrix.length; i++){
+            matrix[i] = new int[i+1]; // Create row i with i + 1 elements.
+        }
+
+    }
+
 
     public static void main(String[] args) {
         twoDimensionalArrayBasic();
