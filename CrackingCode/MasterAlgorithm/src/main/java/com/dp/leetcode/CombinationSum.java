@@ -1,6 +1,6 @@
 package com.dp.leetcode;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,7 +60,6 @@ public class CombinationSum {
             selectedNumList.remove(selectedNumList.size() - 1);
         }
     }
-
 
     @Test
     public void combinationSumTest() {
