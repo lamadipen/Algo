@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cdk.leeteasy.Maximum69Number" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-27T17:56:27" hostname="sea-lamad-m.ds.ad.adp.com" time="288.921">
+  <properties/>
+  <testcase name="maximum69NumberTest" classname="com.cdk.leeteasy.Maximum69Number" time="288.921"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
