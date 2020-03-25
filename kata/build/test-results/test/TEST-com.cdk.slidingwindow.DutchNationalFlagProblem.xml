@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cdk.slidingwindow.DutchNationalFlagProblem" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-12T23:42:34" hostname="sea-lamad-m.ds.ad.adp.com" time="0.003">
+  <properties/>
+  <testcase name="solution" classname="com.cdk.slidingwindow.DutchNationalFlagProblem" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[3, 2, 4, 4, 4, 4, 6, 5]
+]]></system-err>
+</testsuite>
