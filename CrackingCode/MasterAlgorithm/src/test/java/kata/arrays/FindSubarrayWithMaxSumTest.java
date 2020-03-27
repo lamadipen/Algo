@@ -6,7 +6,7 @@ import org.junit.Test;
  * Given the array of integer, find continuous  subarray with maximum sum
  * input [-2, -3, 4, -1, -2, 1, 5, -1]
  * Max sum 7
- * [ 4, -1, -2, 1, 5]
+ * Result [ 4, -1, -2, 1, 5]
  * */
 public class FindSubarrayWithMaxSumTest {
 
