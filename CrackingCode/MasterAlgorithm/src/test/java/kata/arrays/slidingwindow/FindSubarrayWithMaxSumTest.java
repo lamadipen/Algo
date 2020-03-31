@@ -2,6 +2,9 @@ package kata.arrays.slidingwindow;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
+
 /**
  * Given the array of integer, find continuous  subarray with maximum sum
  * input [-2, -3, 4, -1, -2, 1, 5, -1]
@@ -48,7 +51,6 @@ public class FindSubarrayWithMaxSumTest {
         for (int i = pointer1; i <= pointer2; i++) {
             actuals[pointer3++] = input[i];
         }
-
 
         Assert.assertArrayEquals(expected, actuals);
         Assert.assertEquals(7, maxSum);

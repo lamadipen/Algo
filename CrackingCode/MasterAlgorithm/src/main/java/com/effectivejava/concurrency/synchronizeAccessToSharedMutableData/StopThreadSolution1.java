@@ -1,4 +1,4 @@
-package com.effectivejava.concurrency;
+package com.effectivejava.concurrency.synchronizeAccessToSharedMutableData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,19 +20,34 @@ import java.util.concurrent.TimeUnit;
  *
  * */
 //Properly synchronized cooperative thread termination
-public class StopThreadSolution2 {
-    private static volatile boolean stopRequested;
+public class StopThreadSolution1 {
+    private static boolean stopRequested;
 
     public static void main(String[] args) throws InterruptedException {
         Thread backgroundThread = new Thread(() -> {
             int i = 0;
-            while (!stopRequested) {
+            while (!stopRequested()) {
                 i++;
             }
         });
         backgroundThread.start();
 
         TimeUnit.SECONDS.sleep(1);
+        requestStop();
+    }
+
+    private static synchronized boolean stopRequested() {
+        return stopRequested;
+    }
+
+    private static synchronized void requestStop() {
         stopRequested = true;
+    }
+
+    //Lock free synchronization with java.util.concurrent.atomic
+    private static volatile int nextSerialNumber =0;
+
+    public static int generateSerialNumber() {
+        return nextSerialNumber++;
     }
 }

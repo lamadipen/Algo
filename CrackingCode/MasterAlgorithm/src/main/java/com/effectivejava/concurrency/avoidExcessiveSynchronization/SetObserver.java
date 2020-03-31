@@ -1,4 +1,4 @@
-package com.effectivejava.concurrency;
+package com.effectivejava.concurrency.avoidExcessiveSynchronization;
 
 @FunctionalInterface public interface SetObserver<E> {
     //Invoked when an element is added to the observable set

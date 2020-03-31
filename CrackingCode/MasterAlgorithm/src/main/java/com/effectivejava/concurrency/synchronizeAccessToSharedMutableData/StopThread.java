@@ -1,7 +1,6 @@
-package com.effectivejava.concurrency;
+package com.effectivejava.concurrency.synchronizeAccessToSharedMutableData;
 
 import java.util.concurrent.TimeUnit;
-
 /**
  * Effective Java
  * Chapter 11 CONCURRENCY
@@ -19,35 +18,30 @@ import java.util.concurrent.TimeUnit;
  * The program never terminates
  *
  * */
-//Properly synchronized cooperative thread termination
-public class StopThreadSolution1 {
+//Broken How long would you expect this program to run?
+public class StopThread {
     private static boolean stopRequested;
 
     public static void main(String[] args) throws InterruptedException {
         Thread backgroundThread = new Thread(() -> {
             int i = 0;
-            while (!stopRequested()) {
+            while (!stopRequested) {
                 i++;
             }
         });
         backgroundThread.start();
 
         TimeUnit.SECONDS.sleep(1);
-        requestStop();
-    }
-
-    private static synchronized boolean stopRequested() {
-        return stopRequested;
-    }
-
-    private static synchronized void requestStop() {
         stopRequested = true;
     }
 
-    //Lock free synchronization with java.util.concurrent.atomic
+
+    //Broken - requires synchronization!
     private static volatile int nextSerialNumber =0;
 
     public static int generateSerialNumber() {
         return nextSerialNumber++;
     }
+
+
 }

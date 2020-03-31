@@ -44,7 +44,7 @@ public class FindLargestSubStringWithUniqueCharacter {
         String expected = "atwhy";
         int pointer =  0;
         String largestSubstring = "";
-        Set<Character> watcher = new HashSet<>();
+        Set<Character> watcher = new HashSet<>(); //you can use string and do string.contains()
 
         for (int i = 0; i < input.length(); i++) {
             char item = input.charAt(i);
