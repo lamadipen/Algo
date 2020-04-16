@@ -60,4 +60,8 @@ public class CustomLinkedList {
 
         size--;
     }
+
+    public Node getHead() {
+        return head;
+    }
 }
