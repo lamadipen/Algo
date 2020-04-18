@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Hey there!"
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "title": "I got a baby tiger!"
+  },
+  {
+    "id": 3,
+    "userId": 2,
+    "title": "The tiger destroyed the living room..."
+  },
+  {
+    "id": 4,
+    "userId": 3,
+    "title": "I got a tarantula!"
+  },
+  {
+    "id": 5,
+    "userId": 2,
+    "title": "How can I give away my tiger to an animal shelter?"
+  },
+  {
+    "id": 6,
+    "userId": 1,
+    "title": "Life update"
+  },
+  {
+    "id": 7,
+    "userId": 9,
+    "title": "The kids started school today"
+  },
+  {
+    "id": 8,
+    "userId": 8,
+    "title": "My review of the ShamWow"
+  },
+  {
+    "id": 9,
+    "userId": 10,
+    "title": "My first blog post ever"
+  },
+  {
+    "id": 10,
+    "userId": 7,
+    "title": "My manager stole my coffee mug"
+  },
+  {
+    "id": 11,
+    "userId": 5,
+    "title": "Photos from my vacation"
+  },
+  {
+    "id": 12,
+    "userId": 3,
+    "title": "I got a frog!"
+  },
+  {
+    "id": 13,
+    "userId": 4,
+    "title": "My name is Amanda. AMA"
+  },
+  {
+    "id": 14,
+    "userId": 5,
+    "title": "Photos of the backyard"
+  },
+  {
+    "id": 15,
+    "userId": 10,
+    "title": "My second blog post ever"
+  }
+]
