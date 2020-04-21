@@ -1,25 +1,25 @@
 package kata.linkedlist;
 
-import java.util.HashMap;
+import java.util.HashSet;
 
 public class RemoveDuplicate {
 
     public Node remove(CustomLinkedList linkedList) {
         Node tempHead = linkedList.getHead();
-        Node head = linkedList.getHead();
+        Node previous = null;
 
-        HashMap<Node, Node> map = new HashMap<>();
+        HashSet<Node> map = new HashSet<>();
 
         while (tempHead != null) {
-            if (map.containsKey(tempHead)) {
-
+            if (map.contains(tempHead)) {
+                previous.setNext(tempHead.getNext());
             } else {
-                map.put(tempHead, tempHead);
+                map.add(tempHead);
+                previous = tempHead;
             }
             tempHead = tempHead.getNext();
         }
 
-        
-        return null;
+        return linkedList.getHead();
     }
 }
