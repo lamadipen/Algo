@@ -3,7 +3,7 @@ package kata.linkedlist;
 import java.util.Objects;
 
 public class Node {
-    private final int data;
+    private int data;
     private Node next;
 
     public Node(int data) {
@@ -14,6 +14,10 @@ public class Node {
         return data;
     }
 
+    public void setData(int data) {
+        this.data = data;
+    }
+
     public Node getNext() {
         return next;
     }
@@ -21,6 +25,8 @@ public class Node {
     public void setNext(Node next) {
         this.next = next;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
