@@ -42,7 +42,7 @@ public class FindKthItemToLastElement {
 
     public Node findKthToLastRecursiveObject(Node head, int kthItem, Index index) {
         if (head == null) {
-            return  null;
+            return null;
         }
         Node returnedNode = findKthToLastRecursiveObject(head.getNext(), kthItem, index);
         index.value = index.value + 1;
@@ -52,8 +52,29 @@ public class FindKthItemToLastElement {
         }
         return returnedNode;
     }
+
+    public Node findKthToLastRecursiveObjectFailed(CustomLinkedList customLinkedList, int kthItem) {
+        Node node = new Node(0);
+        findKthToLastRecursiveObjectFailed(customLinkedList.getHead(), kthItem, node);
+        return node;
+    }
+
+
+    //when call stack is destroyed the newly created reference will not be visible on the method
+    public int findKthToLastRecursiveObjectFailed(Node head, int kthItem, Node node) {
+        if (head == null) {
+            return 0;
+        }
+        int index = findKthToLastRecursiveObjectFailed(head.getNext(), kthItem, node) + 1;
+
+        if (index == kthItem) {
+            node = new Node(head.getData());
+            return index;
+       }
+        return index;
+    }
 }
 
-class Index{
+class Index {
     int value = 0;
 }
