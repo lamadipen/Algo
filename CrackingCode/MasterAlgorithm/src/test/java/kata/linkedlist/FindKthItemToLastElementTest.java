@@ -74,7 +74,9 @@ public class FindKthItemToLastElementTest {
 
         Node actual = findKthItemToLastElement.findKthToLastRecursiveObjectFailed(customLinkedList, 3);
 
-        Assert.assertEquals(4, actual.getData());
+
+
+        Assert.assertNotEquals(4, (int)actual.getData());
     }
 
 

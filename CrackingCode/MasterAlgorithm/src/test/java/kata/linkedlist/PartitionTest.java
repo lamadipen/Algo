@@ -51,7 +51,7 @@ public class PartitionTest {
         Node previous = null;
 
         while (fastPointer != null) {
-            if (fastPointer.getData() >= partitionPoint) {
+            if ((int)fastPointer.getData() >= partitionPoint) {
                 fastPointer = fastPointer.getNext();
             } else {
                 if (previous == null) {
@@ -59,7 +59,7 @@ public class PartitionTest {
                     slowPointer = slowPointer.getNext();
                     fastPointer = slowPointer.getNext();
                 } else {
-                    int tempValue = fastPointer.getData();
+                    int tempValue = (int)fastPointer.getData();
                     fastPointer.setData(slowPointer.getData());
                     slowPointer.setData(tempValue);
                     slowPointer = slowPointer.getNext();
@@ -112,7 +112,7 @@ public class PartitionTest {
         while (tempHead != null) {
             Node replacerNode = tempHead;
             replacerNode.setNext(null);
-            if (tempHead.getData() < partitionPoint) {
+            if ((int)tempHead.getData() < partitionPoint) {
                 if (lowHalf == null) {
                     lowHalf = replacerNode;
                     lowHalfHead = lowHalf;
@@ -180,7 +180,7 @@ public class PartitionTest {
 
         while (tempHead != null) {
             Node next = tempHead.getNext();
-            if (tempHead.getData() < partitionPoint) {
+            if ((int)tempHead.getData() < partitionPoint) {
                 tempHead.setNext(lowHalf);
                 lowHalf = tempHead;
             } else {

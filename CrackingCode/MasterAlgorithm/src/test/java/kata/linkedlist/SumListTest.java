@@ -39,10 +39,10 @@ public class SumListTest {
         int  value = carry;
 
         if (node1 != null) {
-            value += node1.getData();
+            value += (int)node1.getData();
         }
         if (node2 != null) {
-            value += node2.getData();
+            value += (int)node2.getData();
         }
 
         Node result = new Node(value % 10);
@@ -62,7 +62,7 @@ public class SumListTest {
         int carryOver = 0;
 
         while (node1 != null && node2 != null) {
-            int sum = node1.getData() + node2.getData();
+            int sum = (int)node1.getData() + (int)node2.getData();
 
             if (carryOver > 0) {
                 sum += carryOver;

@@ -1,11 +1,11 @@
 package kata.linkedlist;
 
 /** Write the CustomLinked List with crud operations*/
-public class CustomLinkedList {
+public class CustomLinkedList<T> {
     private int size = 0;
     private Node head;
 
-    public void addToEnd(int data) {
+    public void addToEnd(T data) {
         if (head == null) {
             head = new Node(data);
             size++;
@@ -23,7 +23,7 @@ public class CustomLinkedList {
         return size;
     }
 
-    public Node get(int data) {
+    public Node get(T data) {
         if (head == null) {
             return null;
         }
@@ -42,7 +42,7 @@ public class CustomLinkedList {
         return null;
     }
 
-    public void removeFromEnd(int data) {
+    public void removeFromEnd(T data) {
         if (head.getData() == data) {
             head = head.getNext();
             size--;

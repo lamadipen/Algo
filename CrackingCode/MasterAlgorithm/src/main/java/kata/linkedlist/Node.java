@@ -2,19 +2,19 @@ package kata.linkedlist;
 
 import java.util.Objects;
 
-public class Node {
-    private int data;
+public class Node<T> {
+    private T data;
     private Node next;
 
-    public Node(int data) {
+    public Node(T data) {
         this.data = data;
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
@@ -25,8 +25,6 @@ public class Node {
     public void setNext(Node next) {
         this.next = next;
     }
-
-
 
     @Override
     public boolean equals(Object o) {
