@@ -1,14 +1,15 @@
 package kata.treeandgraph;
 
 /**
- * preorder traversal visit current -> left -> right
+ * postorder traversal visit left -> right -> current
  * */
-public class PreOrderTraversal {
-    public void traverse(TreeNode<Integer> root) {
+public class PostOrderTraversal {
+
+    public void traverse(TreeNode root) {
         if (root != null) {
-            visited(root);
             traverse(root.left);
             traverse(root.right);
+            visited(root);
         }
     }
 

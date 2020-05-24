@@ -6,22 +6,11 @@ public class PreOrderTraversalTest {
 
     @Test
     public void preOrderTraversal() {
-        TreeNode<Integer> root = new TreeNode<>(5);
-        TreeNode<Integer> node1 = new TreeNode<>(3);
-        TreeNode<Integer> node2 = new TreeNode<>(7);
-        TreeNode<Integer> node3 = new TreeNode<>(1);
-        TreeNode<Integer> node4 = new TreeNode<>(4);
-        TreeNode<Integer> node5 = new TreeNode<>(6);
-        TreeNode<Integer> node6 = new TreeNode<>(9);
-
-        root.left = node1;
-        root.right = node2;
-        node1.left = node3;
-        node1.right = node4;
-        node2.left = node5;
-        node2.right = node6;
+        TreeNode mockTreeRoot = MockTreeFactory.getMockTreeRoot();
 
         PreOrderTraversal preOrderTraversal = new PreOrderTraversal();
-        preOrderTraversal.traverse(root);
+        preOrderTraversal.traverse(mockTreeRoot);
+
+        //5 should be in the start as current node is visited first
     }
 }
