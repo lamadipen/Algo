@@ -50,10 +50,17 @@ public class MockTreeFactory {
 
         root.left = node1;
         root.right = node2;
+        node1.parent = root;
         node1.left = node3;
         node1.right = node4;
+        node2.parent = root;
         node2.left = node5;
         node2.right = node6;
+
+        node3.parent = node1;
+        node4.parent = node1;
+        node5.parent = node2;
+        node6.parent = node2;
 
         return root;
     }

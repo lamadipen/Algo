@@ -1,10 +1,11 @@
 package kata.treeandgraph;
 
 public class TreeNode<E> {
-    E data;
-    TreeNode left;
-    TreeNode right;
-    TreeNode parent;
+    public E data;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode parent;
+
     public TreeNode() {
     }
 
