@@ -18,6 +18,8 @@ import java.util.List;
  *
  * You can load a list of rule from the database.
  *
+ * See the test cases of RuleEvaluateService
+ *
  * References:
  * https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/expressions.html
  * https://www.baeldung.com/spring-expression-language
