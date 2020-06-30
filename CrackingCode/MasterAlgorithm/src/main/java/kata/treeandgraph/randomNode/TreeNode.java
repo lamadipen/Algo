@@ -72,4 +72,15 @@ public class TreeNode {
     public int hashCode() {
         return Objects.hash(data);
     }
+
+    public TreeNode findByIndex(int index) {
+        int leftSize = left == null ? 0 : left.size;
+        if (index < leftSize) {
+            return left.findByIndex(index);
+        } else if (index == leftSize) {
+            return this;
+        } else {
+            return right.findByIndex(index - (leftSize + 1));
+        }
+    }
 }
