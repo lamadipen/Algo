@@ -14,13 +14,12 @@ public class PathWithSumTest {
         int expected = pathWithSum.countPathWithSum(null, 8);
         Assert.assertEquals(0, expected);
     }
-
     @Test
     public void pathWithSumTest() {
         PathWithSum pathWithSum = new PathWithSum();
 
-        TreeNode root = MockTreeFactory.getMockForPathWithSumTreeRoot();
-
+//        TreeNode root = MockTreeFactory.getMockForPathWithSumTreeRoot();
+        TreeNode root = MockTreeFactory.getMockTreeRoot();
         int expected = pathWithSum.countPathWithSum(root, 8);
 
         Assert.assertEquals(2, expected);
@@ -31,10 +30,10 @@ public class PathWithSumTest {
     public void pathWithSumOptimizedTest() {
         PathWithSum pathWithSum = new PathWithSum();
 
-        TreeNode root = MockTreeFactory.getMockForPathWithSumTreeRoot();
-
+        TreeNode root = MockTreeFactory.getMockTreeRoot();
+        //TreeNode root = MockTreeFactory.getMockTreeRoot();
         int expected = pathWithSum.countPathWithSumOptimized(root, 8);
 
-        Assert.assertEquals(3, expected);
+        Assert.assertEquals(2, expected);
     }
 }
