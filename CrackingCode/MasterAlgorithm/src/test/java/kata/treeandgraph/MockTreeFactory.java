@@ -112,4 +112,28 @@ public class MockTreeFactory {
 
         return root;
     }
+
+
+    public static TreeNode getMockForPathWithSumTreeRoot() {
+        TreeNode<Integer> root = new TreeNode<>(10);
+        TreeNode<Integer> node5 = new TreeNode<>(5);
+        TreeNode<Integer> nodeMinus3 = new TreeNode<>(-3);
+        TreeNode<Integer> node3 = new TreeNode<>(3);
+        TreeNode<Integer> node2 = new TreeNode<>(2);
+        TreeNode<Integer> node11 = new TreeNode<>(11);
+        TreeNode<Integer> node1 = new TreeNode<>(1);
+        TreeNode<Integer> node3Second = new TreeNode<>(3);
+        TreeNode<Integer> nodeMinus2Second = new TreeNode<>(9);
+
+        root.left = node5;
+        root.right = nodeMinus3;
+        node5.left = node3;
+        node5.right = node2;
+        nodeMinus3.right = node11;
+        node2.right = node1;
+        node3.left = node3Second;
+        node3.right = nodeMinus2Second;
+
+        return root;
+    }
 }
