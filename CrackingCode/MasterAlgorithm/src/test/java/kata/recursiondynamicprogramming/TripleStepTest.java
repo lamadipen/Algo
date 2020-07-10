@@ -26,4 +26,12 @@ public class TripleStepTest {
         Assert.assertEquals(7, actual);
     }
 
+    @Test
+    public void calculateWaysDynamicProgramming3() {
+        TripleStep tripleStep = new TripleStep();
+        int actual = tripleStep.calculateWays(3);
+        Assert.assertEquals(4, actual);
+    }
+
+
 }
