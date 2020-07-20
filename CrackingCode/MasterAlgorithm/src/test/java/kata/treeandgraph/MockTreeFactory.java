@@ -39,6 +39,21 @@ public class MockTreeFactory {
         return root;
     }
 
+    public static TreeNode getMockSmallBSTTreeRoot() {
+        TreeNode<Integer> root = new TreeNode<>(5);
+        TreeNode<Integer> node1 = new TreeNode<>(3);
+        TreeNode<Integer> node2 = new TreeNode<>(7);
+        TreeNode<Integer> node3 = new TreeNode<>(1);
+        TreeNode<Integer> node4 = new TreeNode<>(4);
+
+        root.left = node1;
+        root.right = node2;
+        node1.left = node3;
+        node1.right = node4;
+
+        return root;
+    }
+
     public static TreeNode getMockNotBSTTreeRoot() {
         TreeNode<Integer> root = new TreeNode<>(5);
         TreeNode<Integer> node1 = new TreeNode<>(3);
