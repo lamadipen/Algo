@@ -23,4 +23,13 @@ public class CoinsTest {
         System.out.println(actual);
     }
 
+    @Test
+    public void makeChangeOptimizedTest() {
+        Coins coins = new Coins();
+        int[][] cache = new int[11][11];
+
+        int actual = coins.makeChangeOptimized(10, new int[]{25, 10, 5, 1}, 0, cache);
+        System.out.println(actual);
+    }
+
 }
