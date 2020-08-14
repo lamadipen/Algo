@@ -2,6 +2,11 @@ package kata.recursiondynamicprogramming;
 
 import java.util.List;
 
+/**
+ * Recursion and dynamic programming
+ * Eight Queens
+ * CC: pg 136 Q: 8.12
+ */
 public class EightQueens {
 
     int GRID_SIZE = 8;

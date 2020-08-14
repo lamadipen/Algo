@@ -4,6 +4,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Recursion and dynamic programming
+ * Stack Of Boxes
+ * CC: pg 136 Q: 8.13
+ */
 public class StackBoxes {
 
     public int getMaxStacks(List<Box> boxes) {
