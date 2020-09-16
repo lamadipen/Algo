@@ -2,7 +2,11 @@ package kata.recursiondynamicprogramming;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Recursion and dynamic programming
+ * Permutations without Dups
+ * CC: pg 135 Q: 8.7
+ */
 public class PermutationsWithoutDups {
 
     public List<String> finaAllPermutaion(String input) {
