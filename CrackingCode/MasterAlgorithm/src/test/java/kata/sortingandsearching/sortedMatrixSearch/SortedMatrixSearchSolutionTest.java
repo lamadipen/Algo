@@ -20,4 +20,20 @@ public class SortedMatrixSearchSolutionTest {
 
         Assert.assertTrue(actual);
     }
+
+    @Test
+    public void sortedMatrixSearchSolution1TargetNotFoundTest() {
+        int[][] matrix = new int[][]
+                {
+                        {1, 2, 3},
+                        {5, 6, 7},
+                        {8, 9, 10}
+                };
+
+        SortedMatrixSearchSolution1 solution1 = new SortedMatrixSearchSolution1();
+
+        boolean actual = solution1.search(matrix, 4);
+
+        Assert.assertFalse(actual);
+    }
 }
