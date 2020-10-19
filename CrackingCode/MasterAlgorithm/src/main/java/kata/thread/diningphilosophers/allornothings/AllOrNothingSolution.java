@@ -1,7 +1,5 @@
 package kata.thread.diningphilosophers.allornothings;
 
-import kata.thread.diningphilosophers.problem.Chopstick;
-import kata.thread.diningphilosophers.problem.Philosopher;
 
 /**
  * All or nothing solution
@@ -15,15 +13,15 @@ import kata.thread.diningphilosophers.problem.Philosopher;
  */
 public class AllOrNothingSolution {
     public static void main(String[] args) {
-        kata.thread.diningphilosophers.problem.Chopstick chopstick1 = new kata.thread.diningphilosophers.problem.Chopstick();
-        kata.thread.diningphilosophers.problem.Chopstick chopstick2 = new kata.thread.diningphilosophers.problem.Chopstick();
-        kata.thread.diningphilosophers.problem.Chopstick chopstick3 = new kata.thread.diningphilosophers.problem.Chopstick();
-        kata.thread.diningphilosophers.problem.Chopstick chopstick4 = new Chopstick();
+        Chopstick chopstick1 = new Chopstick();
+        Chopstick chopstick2 = new Chopstick();
+        Chopstick chopstick3 = new Chopstick();
+        Chopstick chopstick4 = new Chopstick();
 
-        kata.thread.diningphilosophers.problem.Philosopher philosopher1 = new kata.thread.diningphilosophers.problem.Philosopher("philosopher1", chopstick1, chopstick2);
-        kata.thread.diningphilosophers.problem.Philosopher philosopher2 = new kata.thread.diningphilosophers.problem.Philosopher("philosopher2", chopstick2, chopstick3);
-        kata.thread.diningphilosophers.problem.Philosopher philosopher3 = new kata.thread.diningphilosophers.problem.Philosopher("philosopher3", chopstick3, chopstick4);
-        kata.thread.diningphilosophers.problem.Philosopher philosopher4 = new Philosopher("philosopher4", chopstick4, chopstick1);
+        Philosopher philosopher1 = new Philosopher("philosopher1", chopstick1, chopstick2);
+        Philosopher philosopher2 = new Philosopher("philosopher2", chopstick2, chopstick3);
+        Philosopher philosopher3 = new Philosopher("philosopher3", chopstick3, chopstick4);
+        Philosopher philosopher4 = new Philosopher("philosopher4", chopstick4, chopstick1);
 
         philosopher1.start();
         philosopher2.start();

@@ -24,7 +24,7 @@ public class Philosopher extends Thread {
     }
 
     private void chew() {
-        System.out.println("Chewing");
+        System.out.println(name + " Chewing");
     }
 
     private boolean pickUp() {
@@ -36,5 +36,12 @@ public class Philosopher extends Thread {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < bites; i++) {
+            eat();
+        }
     }
 }
