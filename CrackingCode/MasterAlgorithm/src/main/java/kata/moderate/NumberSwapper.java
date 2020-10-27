@@ -1,6 +1,7 @@
 package kata.moderate;
 
 /**
+ * Moderate
  * NumberSwapper
  * CC: pg 181 Q: 16.1
  */
