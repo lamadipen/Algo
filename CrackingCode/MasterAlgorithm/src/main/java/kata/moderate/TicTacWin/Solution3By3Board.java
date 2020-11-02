@@ -1,8 +1,11 @@
 package kata.moderate.TicTacWin;
 
+/**
+ * Moderate
+ * Tic Tac Win (3*3) solution
+ * CC: pg 181 Q: 16.4
+ */
 public class Solution3By3Board {
-
-
     public Piece isWinner(Piece[][] pieces) {
 
         for (int i = 0; i < pieces.length; i++) {
