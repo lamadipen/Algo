@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Moderate
- * Best Line
+ * Master Mind
  * CC: pg 183 Q: 16.15
  */
 public class MasterMind {
