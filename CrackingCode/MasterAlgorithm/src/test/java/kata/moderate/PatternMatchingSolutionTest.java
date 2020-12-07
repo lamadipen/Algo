@@ -22,4 +22,13 @@ public class PatternMatchingSolutionTest {
 
         Assert.assertTrue(actual);
     }
+
+    @Test
+    public void doesMatchesFirstOptimizationCustomInputTest() {
+        PatternMatchingSolution patternMatchingSolution = new PatternMatchingSolution();
+
+        boolean actual = patternMatchingSolution.doesMatchesFirstOptimization("ababb", "catgocatgogo");
+
+        Assert.assertTrue(actual);
+    }
 }
