@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * Moderate
+ * Calculator
+ * CC: pg 185 Q: 16.26
+ */
 public class Calculator {
 
     public double calculate(String sequence) {

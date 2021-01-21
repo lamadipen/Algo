@@ -2,6 +2,13 @@ package kata.moderate.calculator;
 
 import java.util.Stack;
 
+/**
+ * Moderate
+ * Calculator
+ * CC: pg 185 Q: 16.26
+ * <p>
+ * This Example is failing need to revisit it
+ */
 public class CalculatorWithStack {
 
     public double calculate(String sequence) {
