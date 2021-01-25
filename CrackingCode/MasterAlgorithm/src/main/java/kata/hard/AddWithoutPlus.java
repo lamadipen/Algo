@@ -1,5 +1,10 @@
 package kata.hard;
 
+/**
+ * Hard
+ * Add Without Plus
+ * CC: pg 186 Q: 17.1
+ */
 public class AddWithoutPlus {
 
     public double addRecursive(int a, int b) {
