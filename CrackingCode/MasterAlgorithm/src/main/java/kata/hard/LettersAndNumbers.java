@@ -5,8 +5,8 @@ import java.util.Map;
 
 /**
  * Hard
- * Add Without Plus
- * CC: pg 186 Q: 17.1
+ * Letters And Numbers
+ * CC: pg 186 Q: 17.5
  */
 public class LettersAndNumbers {
 
