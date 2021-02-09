@@ -59,6 +59,36 @@ public class CircusTower {
             return bestWith.size() > bestWithOut.size() ? bestWith : bestWithOut;
         }
     }
+
+    /**
+     * Runtime O(n^2)
+     */
+    public List<Person> longestIncreasingSequenceOptimized(List<Person> people) {
+        Collections.sort(people);
+        List<List<Person>> solutions = new ArrayList<>();
+        List<Person> bestSeq = null;
+        for (int i = 0; i < people.size(); i++) {
+            List<Person> bestSeqAt = bestSeqAtIndex(people, solutions, i);
+            solutions.add(i, bestSeqAt);
+            bestSeq = max(bestSeq, bestSeqAt);
+        }
+        return bestSeq;
+    }
+
+    private List<Person> bestSeqAtIndex(List<Person> people, List<List<Person>> solutions, int index) {
+        Person person = people.get(index);
+        ArrayList<Person> bestSeq = new ArrayList<>();
+
+        for (int i = 0; i < index; i++) {
+            List<Person> solution = solutions.get(i);
+            if (canBeAdded(person, solution)) {
+                bestSeq = (ArrayList<Person>) max(bestSeq, solution);
+            }
+        }
+        ArrayList<Person> bestSeqClone = (ArrayList<Person>) bestSeq.clone();
+        bestSeq.add(person);
+        return bestSeq;
+    }
 }
 
 class Person implements Comparable<Person> {
