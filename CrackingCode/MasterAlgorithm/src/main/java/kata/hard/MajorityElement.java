@@ -3,7 +3,7 @@ package kata.hard;
 /**
  * Hard
  * Majority Element
- * CC: pg 187 Q: 17.9
+ * CC: pg 187 Q: 17.10
  */
 public class MajorityElement {
 

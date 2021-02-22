@@ -1,26 +1,47 @@
 package com.dp.hrank.interviewPreperationKit.arrays;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class MinimumSwapsTwo {
     // Complete the minimumSwaps function below.
     static int minimumSwaps(int[] arr) {
+        int fistIndex = 0;
+        int secondIndex = 1;
+        int count = 0;
+        while (fistIndex < arr.length - 1) {
+            if (arr[fistIndex] > arr[secondIndex]) {
+                swap(arr, fistIndex, secondIndex);
+                count++;
+            }
+            if (secondIndex == arr.length - 1) {
+                fistIndex = fistIndex + 1;
+                secondIndex = fistIndex;
+            }
+            secondIndex++;
+        }
 
-
-        return 0;
+        return count;
     }
 
+    private static void swap(int[] arr, int fistIndex, int secondIndex) {
+        int temp = arr[fistIndex];
+        arr[fistIndex] = arr[secondIndex];
+        arr[secondIndex] = temp;
 
+
+    }
 
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-          int[] arr ={4, 3, 1, 2};
-          System.out.println(minimumSwaps(arr));
+//          int[] arr ={4, 3, 1, 2};
+//          System.out.println(minimumSwaps(arr));
+
+        int[] arr = {5, 1, 4, 2};
+        System.out.println(minimumSwaps(arr));
+
 
 //        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 //
