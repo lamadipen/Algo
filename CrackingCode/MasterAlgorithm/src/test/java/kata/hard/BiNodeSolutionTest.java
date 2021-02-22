@@ -24,7 +24,7 @@ public class BiNodeSolutionTest {
         BiNode biNode = biNodeSolution.convertToLinkedListWithRetrievingTail(root);
         System.out.println(biNode.value + " tail" + biNode.value);
         Assert.assertEquals(0, biNode.value);
-        // Assert.assertEquals(6, biNode.value);
+        Assert.assertEquals(6, biNode.value);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class BiNodeSolutionTest {
         BiNode biNode = biNodeSolution.convertToCircular(root);
         System.out.println(biNode.value + " tail" + biNode.value);
         Assert.assertEquals(0, biNode.value);
-        // Assert.assertEquals(6, biNode.value);
+        Assert.assertEquals(6, biNode.value);
     }
 
     private BiNode buildBiNode() {
