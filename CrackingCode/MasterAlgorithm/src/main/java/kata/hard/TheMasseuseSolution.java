@@ -53,5 +53,44 @@ public class TheMasseuseSolution {
         return memo[index];
     }
 
+    /**
+     * Runtime O(n) and Space O(n)
+     *
+     * @param times
+     * @return
+     */
+    public int maxBookedMinutesIterative(int[] times) {
+        int length = times.length;
+        int[] memo = new int[length + 2];
+        memo[length] = 0;
+        memo[length + 1] = 0;
+
+        for (int i = length - 1; i >= 0; i--) {
+            int bestWith = times[i] + memo[i + 2];
+            int bestWithout = memo[i + 1];
+            memo[i] = Math.max(bestWith, bestWithout);
+        }
+        return memo[0];
+    }
+
+    /**
+     * Runtime O(n) and Space O(1)
+     *
+     * @param times
+     * @return
+     */
+    public int maxBookedMinutesIterativeSaveSpace(int[] times) {
+        int length = times.length;
+        int oneAway = 0;
+        int twoAways = 0;
+
+        for (int i = length - 1; i >= 0; i--) {
+            int bestWith = times[i] + twoAways;
+            int bestWithout = oneAway;
+            twoAways = oneAway;
+            oneAway = Math.max(bestWith, bestWithout);
+        }
+        return oneAway;
+    }
 
 }
