@@ -14,7 +14,7 @@ public class ContiniousMedianSolutionTest {
 
 
         int median = continiousMedianSolution.findMedian();
-        Assert.assertEquals(3, median);
+        Assert.assertEquals(2, median);
         System.out.println("This is result " + median);
     }
 

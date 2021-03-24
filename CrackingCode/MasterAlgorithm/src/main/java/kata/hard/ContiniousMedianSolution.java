@@ -3,6 +3,11 @@ package kata.hard;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * Hard
+ * Continious Median
+ * CC: pg 189 Q: 17.20
+ */
 public class ContiniousMedianSolution {
     PriorityQueue<Integer> minHeap, maxHeap;
 
@@ -31,10 +36,13 @@ public class ContiniousMedianSolution {
     }
 
     public int findMedian() {
+        if (maxHeap.isEmpty()) {
+            return 0;
+        }
         if (minHeap.size() == maxHeap.size()) {
             return (minHeap.peek() + maxHeap.peek()) / 2;
         } else {
-            return minHeap.peek();
+            return maxHeap.peek();
         }
     }
 }

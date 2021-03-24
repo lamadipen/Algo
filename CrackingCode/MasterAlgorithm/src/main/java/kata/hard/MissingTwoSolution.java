@@ -2,6 +2,12 @@ package kata.hard;
 
 import java.math.BigInteger;
 
+
+/**
+ * Hard
+ * Missing Two
+ * CC: pg 189 Q: 17.19
+ */
 public class MissingTwoSolution {
 
     /**

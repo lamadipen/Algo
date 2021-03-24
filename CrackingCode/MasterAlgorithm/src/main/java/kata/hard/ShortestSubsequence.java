@@ -2,6 +2,11 @@ package kata.hard;
 
 import java.util.*;
 
+/**
+ * Hard
+ * Shortest Subsequence
+ * CC: pg 189 Q: 17.18
+ */
 public class ShortestSubsequence {
 
     /**
