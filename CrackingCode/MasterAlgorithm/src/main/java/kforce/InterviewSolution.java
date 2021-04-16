@@ -39,4 +39,21 @@ public class InterviewSolution {
 
 
     }
+
+
+    String addKbeforeFs(String text) {
+        char[] chars = text.toCharArray();
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == 'f' || chars[i] == 'F') {
+                sb.append('K');
+            }
+            sb.append(chars[i]);
+        }
+        return sb.toString();
+    }
+
+
 }
+

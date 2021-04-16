@@ -18,4 +18,11 @@ public class InterviewSolutionTest {
         int amazing = interviewSolution.binaryPatternMatching("00", "aaaaaaaaaa");
         Assert.assertEquals(9, amazing);
     }
+
+    @Test
+    public void addKbeforeFs() {
+        InterviewSolution interviewSolution = new InterviewSolution();
+        String force = interviewSolution.addKbeforeFs("force");
+        Assert.assertEquals("Kforce", force);
+    }
 }
