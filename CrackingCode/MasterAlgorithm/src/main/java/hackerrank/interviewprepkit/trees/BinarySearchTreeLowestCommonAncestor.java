@@ -1,4 +1,4 @@
-package hackerrank.interviewprepkit.recursionandbacktracking;
+package hackerrank.interviewprepkit.trees;
 
 /**
  * Interview Preparation Kit | Trees | Binary Search Tree : Lowest Common Ancestor

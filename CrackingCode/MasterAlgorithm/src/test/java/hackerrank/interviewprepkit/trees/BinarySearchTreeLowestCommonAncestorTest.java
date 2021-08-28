@@ -1,4 +1,4 @@
-package hackerrank.interviewprepkit.recursionandbacktracking;
+package hackerrank.interviewprepkit.trees;
 
 import org.junit.Assert;
 import org.junit.Test;
