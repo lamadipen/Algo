@@ -75,6 +75,6 @@ public class BinarySearchTreeLowestCommonAncestorTest {
 
         Node ans = BinarySearchTreeLowestCommonAncestor.lca(root, v1, v2);
         System.out.println(ans.data);
-        Assert.assertEquals(4, ans.data);
+        Assert.assertEquals(1, ans.data);
     }
 }

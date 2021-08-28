@@ -7,16 +7,17 @@ public class BinarySearchTreeLowestCommonAncestor {
 
 
     public static Node lca(Node root, int v1, int v2) {
-        if (v1 < root.data && v2 > root.data) {
-            return root;
-        }
-        if (v1 > root.data && v2 < root.data) {
-            return root;
-        }
+// This logic is not required as default flow handles this logic
+//        if (v1 < root.data && v2 > root.data) {
+//            return root;
+//        }
+//        if (v1 > root.data && v2 < root.data) {
+//            return root;
+//        }
         if (root.data == v1 || root.data == v2) {
             return root;
         }
-        if (root.left.data == v1 || root.right.data == v1 || root.left.data == v2 || root.right.data == v2) {
+        if ((root.left.data == v1 && v2 < root.data) || (root.left.data == v2 && v1 < root.data) || (root.right.data == v1 && v2 > root.data) || (root.right.data == v2 && v1 > root.data)) {
             return root;
         }
         if (v1 < root.data && v2 < root.data) {
