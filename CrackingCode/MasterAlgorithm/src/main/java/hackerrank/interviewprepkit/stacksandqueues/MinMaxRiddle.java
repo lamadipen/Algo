@@ -23,7 +23,9 @@ public class MinMaxRiddle {
             rightBoundaries[index] = noOfElement;
         }
 
-        /** what is the index of the first element on my left smaller than me */
+        /** what is the index of the first element on my left smaller than me
+         * stack is used to determine/calculate window size
+         * */
         for (int index = 0; index < noOfElement; index++) {
             while (!stack.isEmpty() && input[stack.peek()] >= input[index]) {
                 stack.pop();
