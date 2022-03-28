@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * Interview Preparation Kit | Stacks and Queues | Poisonous Plants
+ */
 public class PoisonousPlantsSolution {
 
     //6 5 8 4 7 10 9
