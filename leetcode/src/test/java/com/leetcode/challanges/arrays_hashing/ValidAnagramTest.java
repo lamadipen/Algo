@@ -16,6 +16,6 @@ class ValidAnagramTest {
     @Test
     void isAnagramTest2() {
         boolean actual = ValidAnagram.isAnagram("rat","car");
-        Assertions.assertEquals(true,actual);
+        Assertions.assertEquals(false,actual);
     }
 }
