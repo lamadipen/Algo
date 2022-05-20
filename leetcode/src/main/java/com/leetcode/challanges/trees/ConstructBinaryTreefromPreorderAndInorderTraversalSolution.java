@@ -9,6 +9,10 @@ import java.util.stream.IntStream;
  * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  * */
 public class ConstructBinaryTreefromPreorderAndInorderTraversalSolution {
+    /**
+     * Runtime O(n)
+     * Space Complexity O(n)
+     * */
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
         if(preorder == null || inorder == null) return null;
 
