@@ -8,6 +8,10 @@ import java.util.Comparator;
  * https://leetcode.com/problems/non-overlapping-intervals/
  */
 public class NonOverlappingIntervalsSolution {
+    /***
+     * Runtime O(nlogn)
+     * Depending on sorting algorythm O(n)
+     * */
     public static int eraseOverlapIntervals(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparing(interval -> interval[0]));
 
