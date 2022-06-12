@@ -1,9 +1,10 @@
 package com.leetcode.challanges.oneDDynamicProgramming;
+
 /**
  * House Robber
  * https://leetcode.com/problems/house-robber/
  * Pattern: Top-Down Dynamic Programming
- * */
+ */
 public class HouseRobberSolution {
     /**
      * Runtime O(n)
@@ -18,6 +19,6 @@ public class HouseRobberSolution {
             choice1 = choice2;
             choice2 = temp;
         }
-        return choice1;
+        return choice2;
     }
 }
