@@ -22,4 +22,22 @@ class RemoveNthNodeFromEndOfListSolutionTest {
         Assertions.assertEquals(3,actual.next.next.val);
         Assertions.assertEquals(5,actual.next.next.next.val);
     }
+
+    @Test
+    void removeNthFromEndTest2() {
+        ListNode node1 = new ListNode(1);
+
+        ListNode actual = RemoveNthNodeFromEndOfListSolution.removeNthFromEnd(node1,1);
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    void removeNthFromEndTest3() {
+        ListNode node2 = new ListNode(2);
+        ListNode node1 = new ListNode(1,node2);
+
+        ListNode actual = RemoveNthNodeFromEndOfListSolution.removeNthFromEnd(node1,1);
+        Assertions.assertNotNull(actual);
+        Assertions.assertEquals(1,actual.val);
+    }
 }
