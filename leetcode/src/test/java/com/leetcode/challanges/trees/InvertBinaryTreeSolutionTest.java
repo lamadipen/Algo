@@ -28,7 +28,7 @@ class InvertBinaryTreeSolutionTest {
         root.left = node2;
         root.right = node7;
 
-        TreeNode treeNode = InvertBinaryTreeSolution.invertTree(root);
+        TreeNode treeNode = InvertBinaryTreeSolution.invertTreeWorkingSolution(root);
         printTree(treeNode);
         System.out.println("_________Inorder traversal_______");
         inorderTraversal(treeNode);

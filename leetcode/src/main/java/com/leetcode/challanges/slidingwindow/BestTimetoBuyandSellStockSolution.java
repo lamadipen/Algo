@@ -3,6 +3,8 @@ package com.leetcode.challanges.slidingwindow;
 /**
  * Best Time to Buy and Sell Stock
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * <p>
+ * https://www.youtube.com/watch?v=1pkOgXD63yU
  */
 public class BestTimetoBuyandSellStockSolution {
     /**
@@ -25,8 +27,8 @@ public class BestTimetoBuyandSellStockSolution {
     }
 
     /**
-     *  Runtime O(n)
-     *  Space Complexity O(1)
+     * Runtime O(n)
+     * Space Complexity O(1)
      */
     public static int maxProfitOptimized(int[] prices) {
         int maxProfit = 0;
@@ -48,17 +50,16 @@ public class BestTimetoBuyandSellStockSolution {
     }
 
     /**
-     *  Runtime O(n)
-     *  Space Complexity O(1)
+     * Runtime O(n)
+     * Space Complexity O(1)
      */
     public static int maxProfit(int[] prices) {
         int sell = 0;
         int buy = Integer.MAX_VALUE;
-        for (int price: prices) {
+        for (int price : prices) {
             if (price < buy) {
                 buy = price;
-            }
-            else {
+            } else {
                 sell = Math.max(sell, price - buy);
             }
         }

@@ -1,5 +1,11 @@
 package com.leetcode.challanges.binarysearch;
-
+/**
+ * Search in Rotated Sorted Array
+ * https://leetcode.com/problems/search-in-rotated-sorted-array/
+ *
+ * https://www.youtube.com/watch?v=U8XENwh8Oy8
+ *
+ * */
 public class SearchInRotatedSortedArraySolution {
 /**
  * Runtime O(logn)

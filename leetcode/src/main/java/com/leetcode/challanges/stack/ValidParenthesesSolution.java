@@ -7,6 +7,8 @@ import java.util.Stack;
 /**
  *  Valid Parentheses
  *  https://leetcode.com/problems/valid-parentheses/
+ *
+ *  https://www.youtube.com/watch?v=WTzjTskDFMg&feature=youtu.be
  * */
 public class ValidParenthesesSolution {
     /**

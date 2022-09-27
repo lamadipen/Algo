@@ -9,6 +9,8 @@ import java.util.stream.IntStream;
 /**
  * Meeting Rooms
  * https://www.lintcode.com/problem/920/
+ *
+ * https://www.youtube.com/watch?v=PaJxqZVPhbg
  * */
 public class MeetingRoomsSolution {
     /**

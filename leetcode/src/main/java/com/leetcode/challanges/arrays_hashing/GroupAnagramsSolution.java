@@ -6,11 +6,12 @@ import java.util.*;
  * Group Anagrams
  * https://leetcode.com/problems/group-anagrams/
  *
+ * https://www.youtube.com/watch?v=vzdNOK2oB2E
  * */
 public class GroupAnagramsSolution {
 
     /**
-     * Runtime O(n*slongs) where n is number of strings in input array and s is length of individual string
+     * Runtime O(n*slogs) where n is number of strings in input array and s is length of individual string
      * Space Complexity O(n + M)
      * */
 

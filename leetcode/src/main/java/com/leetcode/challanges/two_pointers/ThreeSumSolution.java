@@ -5,6 +5,8 @@ import java.util.*;
 /**
  * 3Sum
  * https://leetcode.com/problems/3sum/
+ *
+ * https://www.youtube.com/watch?v=jzZsG8n2R9A
  */
 public class ThreeSumSolution {
 

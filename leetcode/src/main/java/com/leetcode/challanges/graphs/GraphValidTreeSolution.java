@@ -7,7 +7,9 @@ import java.util.Set;
 
 /**
  * Graph Valid Tree
+ * https://www.lintcode.com/problem/178/
  *
+ * https://www.youtube.com/watch?v=bXsUuownnoQ
  * */
 public class GraphValidTreeSolution {
 

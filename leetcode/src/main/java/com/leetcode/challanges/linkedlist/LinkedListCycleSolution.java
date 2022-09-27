@@ -5,6 +5,8 @@ import java.util.HashSet;
 /**
  * Linked List Cycle
  * https://leetcode.com/problems/linked-list-cycle/
+ *
+ * https://www.youtube.com/watch?v=gBTe7lFR3vc
  * */
 public class LinkedListCycleSolution {
     /**
@@ -29,7 +31,7 @@ public class LinkedListCycleSolution {
 
     /**
      * Runtime O(n)
-     * Space Complexity O(n)
+     * Space Complexity O(n)F
      * */
     public static boolean hasCycle(ListNode head) {
         HashSet<ListNode> set = new HashSet<>();

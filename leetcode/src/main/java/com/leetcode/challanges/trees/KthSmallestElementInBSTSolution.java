@@ -1,12 +1,12 @@
 package com.leetcode.challanges.trees;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Kth Smallest Element in a BST
  * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+ *
+ * https://www.youtube.com/watch?v=5LUXSvjmGCw
  * */
 public class KthSmallestElementInBSTSolution {
     /**
@@ -30,5 +30,19 @@ public class KthSmallestElementInBSTSolution {
             }
         }
         return 0;
+    }
+
+    public int kthSmallestCorrectOne(TreeNode root, int k) {
+        List<Integer> list = new ArrayList<>();
+        inorder(root, list);
+        return list.isEmpty()? 0:list.get(k - 1);
+    }
+
+    private void inorder(TreeNode root, List<Integer> list) {
+        if (root == null) return;
+
+        inorder(root.left, list);
+        list.add(root.val);
+        inorder(root.right, list);
     }
 }

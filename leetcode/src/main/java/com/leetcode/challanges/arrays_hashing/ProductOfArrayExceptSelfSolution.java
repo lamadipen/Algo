@@ -5,6 +5,8 @@ import java.util.Arrays;
 /**
  * Product of Array Except Self
  * https://leetcode.com/problems/product-of-array-except-self/
+ *
+ * https://www.youtube.com/watch?v=bNvIQI2wAjk
  */
 public class ProductOfArrayExceptSelfSolution {
     /**
@@ -41,7 +43,7 @@ public class ProductOfArrayExceptSelfSolution {
                 result[i] = 1 * postfix[i+1];
 
             }else if(i== inputLength-1){
-                result[i] = prefix[i-1];
+                result[i] = 1*prefix[i-1];
             }else{
                 result[i] = prefix[i-1] * postfix[i+1];
             }

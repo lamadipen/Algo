@@ -6,6 +6,8 @@ import java.util.Comparator;
 /**
  * Merge Intervals
  * https://leetcode.com/problems/merge-intervals/
+ *
+ * https://www.youtube.com/watch?v=44H3cEC2fFM
  * */
 public class MergeIntervalsSolution {
 

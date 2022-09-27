@@ -5,6 +5,8 @@ import java.util.*;
 /**
  * Top K Frequent Elements
  * https://leetcode.com/problems/top-k-frequent-elements/
+ *
+ * https://www.youtube.com/watch?v=YPTqKIgVk-k
  */
 public class TopKFrequentElementsSolution {
 

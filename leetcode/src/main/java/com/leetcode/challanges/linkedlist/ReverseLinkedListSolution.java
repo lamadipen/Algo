@@ -6,6 +6,8 @@ import java.util.Stack;
 /**
  * Reverse Linked List
  * https://leetcode.com/problems/reverse-linked-list/
+ *
+ * https://www.youtube.com/watch?v=G0_I-ZF0S38
  * */
 public class ReverseLinkedListSolution {
     /**

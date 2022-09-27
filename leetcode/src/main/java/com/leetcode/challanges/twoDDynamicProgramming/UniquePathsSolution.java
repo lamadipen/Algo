@@ -1,4 +1,4 @@
-package com.leetcode.challanges.towDDynamicProgramming;
+package com.leetcode.challanges.twoDDynamicProgramming;
 
 
 /**

@@ -2,6 +2,8 @@ package com.leetcode.challanges.trees;
 /**
  * Invert Binary Tree
  * https://leetcode.com/problems/invert-binary-tree/
+ *
+ *
  * */
 public class InvertBinaryTreeSolution {
     /**
@@ -19,5 +21,14 @@ public class InvertBinaryTreeSolution {
         right.right = left;
 
         return root;
+    }
+
+    public static TreeNode invertTreeWorkingSolution(TreeNode root) {
+        if (root == null) return null;
+        TreeNode node = new TreeNode(root.val);
+        node.right = invertTreeWorkingSolution(root.left);
+        node.val = root.val;
+        node.left = invertTreeWorkingSolution(root.right);
+        return node;
     }
 }

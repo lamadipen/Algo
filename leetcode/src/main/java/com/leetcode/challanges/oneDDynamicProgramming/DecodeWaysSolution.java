@@ -7,6 +7,8 @@ import java.util.stream.IntStream;
 /**
  * Decode Ways
  * https://leetcode.com/problems/decode-ways/
+ *
+ * https://www.youtube.com/watch?v=6aEyTjOwlJU
  */
 public class DecodeWaysSolution {
     public static List<String> LETTERS = IntStream.range(1, 27).mapToObj(Integer::toString).collect(Collectors.toList());

@@ -6,6 +6,9 @@ import java.util.List;
 /**
  * Meeting Rooms II
  * https://www.lintcode.com/problem/919/
+ *
+ * https://www.youtube.com/watch?v=FdzJmTCVyJU
+ *
  * */
 public class MeetingRoomsIISolution {
     /**
@@ -28,18 +31,18 @@ public class MeetingRoomsIISolution {
         Arrays.sort(startTime);
         Arrays.sort(endTime);
 
-        int minMeetingRooms =Integer.MAX_VALUE;
+        int minMeetingRooms =0;
         int countMeetingRooms =0;
-        int i =0;
-        int j =0;
+        int startIndex =0;
+        int endIndex =0;
 
-        while (i < intervals.size()) {
-            if (startTime[i] < endTime[j]) {
+        while (startIndex < intervals.size()) {
+            if (startTime[startIndex] < endTime[endIndex]) {
                 countMeetingRooms++;
-                i++;
+                startIndex++;
             }else{
                 countMeetingRooms--;
-                j++;
+                endIndex++;
             }
             minMeetingRooms = Math.max(minMeetingRooms, countMeetingRooms);
         }

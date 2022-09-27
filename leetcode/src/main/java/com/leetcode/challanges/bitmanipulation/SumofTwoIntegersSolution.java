@@ -2,6 +2,8 @@ package com.leetcode.challanges.bitmanipulation;
 /**
  * Sum of Two Integers
  * https://leetcode.com/problems/sum-of-two-integers/
+ *
+ * https://www.youtube.com/watch?v=gVUrDV4tZfY
  * */
 public class SumofTwoIntegersSolution {
 
@@ -12,7 +14,7 @@ public class SumofTwoIntegersSolution {
     public static int getSum(int a, int b) {
         while (b != 0) {
             int carry = (a & b) << 1; // don't miss the brackets, it's better to do in 2 steps.
-            a = (a ^ b);
+            a = (a ^ b); //XOR between a and b
             b = carry;
         }
         return a;

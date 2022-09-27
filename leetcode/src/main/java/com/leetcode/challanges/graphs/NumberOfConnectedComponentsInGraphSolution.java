@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+/**
+ * Number of Connected Components in Graph
+ * https://www.youtube.com/watch?v=8f1XPm4WOUc
+ * Union Fined Best Scenario for this kind of problem
+ * */
 public class NumberOfConnectedComponentsInGraphSolution {
     /**
      * Runtime O(n + e) where n is number of nodes and e is number of edges.

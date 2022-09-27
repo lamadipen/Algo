@@ -1,9 +1,7 @@
-package com.leetcode.challanges.towDDynamicProgramming;
+package com.leetcode.challanges.twoDDynamicProgramming;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UniquePathsSolutionTest {
 

@@ -3,6 +3,7 @@ package com.leetcode.challanges.oneDDynamicProgramming;
  * Longest Palindromic Substring
  * https://leetcode.com/problems/longest-palindromic-substring/
  *
+ * https://www.youtube.com/watch?v=XYQecbcd6_c
  * */
 public class LongestPalindromicSubstringSolution {
     /**
@@ -31,6 +32,7 @@ public class LongestPalindromicSubstringSolution {
             left = i;
             right = i+1;
 
+            //even length palindrom scenario
             while (left >= 0 && right < inputLength && s.charAt(left) == s.charAt(right)) {
                 if (right - left + 1 > resultLen) {
                     resultLen = right - left +1;

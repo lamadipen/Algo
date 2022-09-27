@@ -2,6 +2,8 @@ package com.leetcode.challanges.oneDDynamicProgramming;
 /**
  * Climbing Stairs
  * https://leetcode.com/problems/climbing-stairs/
+ *
+ * https://www.youtube.com/watch?v=Y0lT9Fck7qI
  * */
 public class ClimbingStairsSolution {
     /**
@@ -15,7 +17,7 @@ public class ClimbingStairsSolution {
 
         for (int i = 0; i < n - 1; i++) {
             int temp = one;
-             one = one + two;
+            one = one + two;
             two = temp;
         }
         return one;

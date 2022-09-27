@@ -4,6 +4,8 @@ package com.leetcode.challanges.two_pointers;
  * Valid Palindrome
  * https://leetcode.com/problems/valid-palindrome/
  *
+ * https://www.youtube.com/watch?v=jJXJ16kPFWg
+ *
  * */
 public class ValidPalindromeSolution {
     /**

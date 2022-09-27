@@ -6,6 +6,8 @@ import java.util.Comparator;
 /**
  * Non-overlapping Intervals
  * https://leetcode.com/problems/non-overlapping-intervals/
+ *
+ * https://www.youtube.com/watch?v=nONCGxWoUfM
  */
 public class NonOverlappingIntervalsSolution {
     /***

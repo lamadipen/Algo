@@ -1,5 +1,10 @@
 package com.leetcode.challanges.binarysearch;
-
+/**
+ * Find Minimum in Rotated Sorted Array
+ * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+ *
+ * https://www.youtube.com/watch?v=nIVW4P8b1VA
+ * */
 public class FindMinimumInRotatedSortedArraySolution {
 
     /**

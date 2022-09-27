@@ -5,6 +5,8 @@ import java.util.List;
 /**
  * Encode and Decode Strings
  * https://www.lintcode.com/problem/659/
+ *
+ * https://www.youtube.com/watch?v=B1k_sxOSgv8
  * */
 public class EncodeAndDecodeStringsSolution {
 

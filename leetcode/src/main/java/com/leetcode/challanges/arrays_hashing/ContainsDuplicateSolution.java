@@ -9,6 +9,8 @@ import java.util.Set;
  * Contains Duplicate
  * https://leetcode.com/problems/contains-duplicate/
  *
+ * https://www.youtube.com/watch?v=3OamzN90kPg&feature=youtu.be
+ *
  * */
 public class ContainsDuplicateSolution {
 

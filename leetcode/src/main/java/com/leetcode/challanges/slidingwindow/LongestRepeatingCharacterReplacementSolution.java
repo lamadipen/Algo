@@ -7,6 +7,8 @@ import java.util.Map;
 /**
  * Longest Repeating Character Replacement
  * https://leetcode.com/problems/longest-repeating-character-replacement/
+ *
+ * https://www.youtube.com/watch?v=gqXU1UyA8pk
  */
 public class LongestRepeatingCharacterReplacementSolution {
     /**
@@ -26,7 +28,7 @@ public class LongestRepeatingCharacterReplacementSolution {
 
             while ((windowEnd - windowStart + 1) - Collections.max(charCount.values()) > k) {
                 char starChar = s.charAt(windowStart);
-                charCount.put(starChar, charCount.getOrDefault(starChar,0)+1);
+                charCount.put(starChar, charCount.getOrDefault(starChar,0)-1);
                 windowStart = windowStart +1;
             }
             result = Math.max(result,windowEnd- windowStart +1);
